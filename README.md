@@ -15,6 +15,8 @@ Implement a program that can read both files and then:
 3. Generate a report for each person, showing with whom they played and how they fared.
 4. Generate a list of suggested next matches.
 
+`Note :The algorithm uses default Elo rating value of 1000 as a starting (average) value and the algorithm uses constant value of 30 for K-factor.`
+
 ## My Implementation
 
 * It's built for **SpringBoot 2.4.2**
