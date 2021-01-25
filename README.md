@@ -45,6 +45,15 @@ Double click on "runApp.bat" file.
 ```
 
 
+
+## To test API by running it locally you can use attached postman collection.
+```
+https://github.com/vickhny/EloRankingAlgorithmService/blob/main/EloRanking.postman_collection.json
+
+```
+
+
+
 ## REST APIs Endpoints
 ### Upload player and match data in text file format
 ```
