@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "d1b37a72-5993-45f6-9122-6b28edae6cbc",
+		"name": "EloRanking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Player And Match Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "names",
+							"type": "file",
+							"src": "/Users/vikashkumar/IntellijProjects/elo/names.txt"
+						},
+						{
+							"key": "matches",
+							"type": "file",
+							"src": "/Users/vikashkumar/IntellijProjects/elo/matches.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/elo/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"elo",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL Player Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sortBy",
+							"value": "WINS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/elo/getAllPlayerInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"elo",
+						"getAllPlayerInfo"
+					]
+				},
+				"description": "You can use sorting by providing SortBy param in form-data. SortBy takes player attributes as argument i.e ID, NAME, WINS, LOSES, RANK, SCORE.\nDefault sorting order is based on PlayerID."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Individual Player Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "playerId",
+							"value": "36",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/elo/playerInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"elo",
+						"playerInfo"
+					]
+				},
+				"description": "You can use sorting by providing SortBy param in form-data. SortBy takes player attributes as argument i.e ID, NAME, WINS, LOSES, RANK, SCORE.\nDefault sorting order is based on PlayerID."
+			},
+			"response": []
+		},
+		{
+			"name": "Suggested Next Matches",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sortBy",
+							"value": "RANK",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/elo/suggestedMatches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"elo",
+						"suggestedMatches"
+					]
+				},
+				"description": "You can use sorting by providing SortBy param in form-data. SortBy takes player attributes as argument i.e ID, NAME, WINS, LOSES, RANK, SCORE.\nDefault sorting order is based on PlayerID."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
